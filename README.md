@@ -1,2 +1,2 @@
 # tonno
-Transistor Occasionale nella Necessità Operativa
+Transistor Occasionale Nella Necessità Operativa
