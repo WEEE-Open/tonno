@@ -60,6 +60,49 @@
                         </button>
                     </form>
                     
+                    <div id="progresso">
+                        <br>
+                        <form method='POST'>
+                            <button type="submit" name='US' value='abort' class="btn btn-outline-danger btn-block" id="annulla">
+                                Annulla
+                            </button>
+                        </form>
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div id="avviso">
+                        <br>
+                        <div class="alert alert-dismissable alert-info fade show" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong>Fatto.</strong> aspetta qualche secondo e controlla.
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        var i = 0;
+                        function makeProgress(){
+                            if(i < 100){
+                                i = i + 1;
+                                $(".progress-bar").css("width", i + "%");
+                                $("#avviso").hide();
+                                $("#on").prop('disabled', true);
+                                $("#reset").prop('disabled', true);
+                                $("#off").prop('disabled', true);
+                            } else {
+                                $("#avviso").show();
+                                $("#progresso").fadeOut(500,"swing");
+                                $("#on").prop('disabled', false);
+                                $("#reset").prop('disabled', false);
+                                $("#off").prop('disabled', false);
+                            }
+                            setTimeout("makeProgress()", 50);
+                        }
+                        makeProgress();
+                    </script>
+                    
                 </div>
             </div>
         </div>
