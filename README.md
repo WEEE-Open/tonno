@@ -5,4 +5,4 @@ C'è dell'html con dentro bootstrap e javscript. Tutto spezzettato con http://da
 
 Tutto molto bello, ma devi mettere SSID e password del tuo Wi-Fi e l'IP della machina target.
 
-<img src="/Users/andreamannarella/Desktop/tonno/screen.png" alt="image-20201012213635699" style="zoom: 33%;" />
+<img src="screen.png" alt="image-20201012213635699" style="zoom: 33%;" />
